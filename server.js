@@ -5,8 +5,8 @@ const app = express();
 app.use(express.json());
 
 // 🔐 PUT YOUR DETAILS HERE (ONLY HERE, NOT IN HTML)
-const TOKEN = "YOUR_BOT_TOKEN";
-const CHAT_ID = "YOUR_CHAT_ID";
+const TOKEN = process.env.TOKEN;
+const CHAT_ID = process.env.CHAT_ID;
 
 app.post("/send-location", async (req, res) => {
     const { lat, lon } = req.body;
